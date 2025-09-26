@@ -69,21 +69,6 @@ export let cursorHoverObjects = [];
 
 // start Ammo Engine
 Ammo().then((Ammo) => {
-  //Ammo.js variable declaration
-  let rigidBodies = [],
-    physicsWorld;
-
-  //Ammo Dynamic bodies for ball
-  let ballObject = null;
-  const STATE = { DISABLE_DEACTIVATION: 4 };
-
-  //default transform object
-  let tmpTrans = new Ammo.btTransform();
-
-  // list of hyperlink objects
-  var objectsWithLinks = [];
-
-  //function to create physics world with Ammo.js
   function createPhysicsWorld() {
     //algortihms for full (not broadphase) collision detection
     let collisionConfiguration = new Ammo.btDefaultCollisionConfiguration(),
